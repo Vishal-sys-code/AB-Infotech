@@ -33,15 +33,21 @@ const NavLinks = () => {
 
     return (
         <>
-            <a href={url1} className="px-4 font-extrabold text-gray-500 hover:text-blue-900" target="_blank" rel="noopener noreferrer">
+            <Link href={url1} className="px-4 font-extrabold text-gray-500 hover:text-blue-900" to="/about">
                 About
-            </a>
-            <a href={url2} className="px-4 font-extrabold text-gray-500 hover:text-blue-900">
+            </Link>
+            <Link className="px-4 font-extrabold text-gray-500 hover:text-blue-900" to="/services">
                 Services
-            </a>
-            <a href={url3} className="px-4 font-extrabold text-gray-500 hover:text-blue-900">
-                Contact Us
-            </a>
+            </Link>
+            <Link className="px-4 font-extrabold text-gray-500 hover:text-blue-900" to="/portfolio">
+                Portfolio
+            </Link>
+            <Link className="px-4 font-extrabold text-gray-500 hover:text-blue-900" to="/enquiry">
+                Enquiry
+            </Link>
+            <Link className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-auto px-6 py-3 shadow-xl rounded-xl" smooth to="/get-demo">
+                Demo our products
+            </Link>
         </>
     )
 }
