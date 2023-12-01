@@ -3,6 +3,12 @@ import {Link} from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
+    const url1 = 'https://sites.google.com/view/ab-infotech-info/home';
+    const url2 = 'https://sites.google.com/view/ab-infotech-services/home';
+    const url3 = 'https://sites.google.com/view/ab-infotech-about-us/home';
+    const handleExternalLink = (url) => {
+        window.open(url, '_blank');
+    };
     return (
         <>
             <footer>
@@ -27,13 +33,13 @@ const Footer = () => {
                         <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
                         <ul className="text-md">
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
+                            <a href={url1}  className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</a>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
+                            <a href={url2} className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</a>
                         </li>
                         <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
+                            <a href={url3} className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</a>
                         </li>                            
                         </ul>
                     </div>
